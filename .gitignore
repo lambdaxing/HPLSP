@@ -6,6 +6,7 @@
 !*.h
 !*.txt
 !*.md
+!*.c
 
 # Unignore all dirs
 !*/
