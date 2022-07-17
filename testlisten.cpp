@@ -7,6 +7,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>
+#include <errno.h>
 
 static bool stop = false;
 
@@ -21,7 +22,7 @@ int main(int argc, char* argv[])
     signal(SIGTERM, handle_term);
 
     if(argc <= 3) {
-        printf("usage: %s ip_address port_number backlog\n", argv[0]);
+        printf("usage: %s ip_address port_number backlog\n", basename(argv[0]));
         return 1;
     }
     const char* ip = argv[1];
@@ -39,11 +40,12 @@ int main(int argc, char* argv[])
     address.sin_port = htons(port);
 
     int ret = bind(sock, (struct sockaddr*)&address, sizeof(address));
+    perror(strerror(errno));
     assert(ret != -1);
 
     ret = listen(sock,backlog);
     assert(ret != -1);
-
+    
     /* 循环等待连接，直到 SIGTERM 信号将它中断 */
     while(!stop)
     {
