@@ -11,7 +11,8 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.out"
+                "${fileDirname}/${fileBasenameNoExtension}.out",
+                "-lpthread" // for pthread
             ],
             "group": {
                 "kind": "build",
