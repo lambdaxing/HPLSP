@@ -26,5 +26,5 @@
 
 ## 编译
 ```shell
-$ g++ main.cpp http_conn.cpp -o main.out -lpthread -lrt -levent
+g++ main.cpp http_conn.cpp -o main.out -lpthread -lrt -levent
 ```
