@@ -27,7 +27,7 @@
     - 主进程管理监听 soket、派发连接 socket
     - 工作进程管理连接 socket 及其上的 I/O 操作
 * 源码：
-    - 主函数：[cgi.cpp](https://github.com/lambdaxing/HPLSP/tree/master/ch15/cig.cpp)
+    - 主函数：[cgi.cpp](https://github.com/lambdaxing/HPLSP/tree/master/ch15/cgi.cpp)
     - 进程池类：[processpool.h](https://github.com/lambdaxing/HPLSP/tree/master/ch15/processpool.h)
 
 ## 编译
