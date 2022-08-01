@@ -9,7 +9,10 @@
             "type": "cppdbg", //配置类型，只能为cppdbg
             "request": "launch", //请求类型，可以为launch或attach
             "program": "${fileDirname}/${fileBasenameNoExtension}.out", //将要调试的程序的路径
-            "args": [], //调试时传递给程序的命令行参数
+            "args": [
+                "172.17.10.100",
+                "80"
+            ], //调试时传递给程序的命令行参数
             "stopAtEntry": false, //设为true程序会暂停在入口处
             "cwd": "${workspaceFolder}", //调试程序时的工作目录
             "environment": [], //环境变量

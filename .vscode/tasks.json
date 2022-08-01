@@ -1,23 +1,21 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build", //在launch.json文件中有用到
+            "label": "build",
             "type": "shell",
             "command": "g++",
             "args": [
                 "-g",
                 "${file}",
+                "${fileDirname}/http_conn.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.out",
-                "-lpthread" // for pthread
+                "-lpthread",    // for thread
+                "-levent",      // for libevent
+                "-lrt"          // for 
             ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
+            "group": "build"
         }
     ]
 }
