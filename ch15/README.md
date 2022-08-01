@@ -18,7 +18,7 @@
 * I/O 模型：I/O 复用 epoll
 * 事件处理模式：Reactor
 * 并发模式：高效的半同步/半异步模式 
-    - 主进程管理监听 soket、派发连接 socket
+    - 主进程管理监听 socket、派发连接 socket
     - 工作进程管理连接 socket 及其上的 I/O 操作
 * 源码：
     - 主函数：[cgi.cpp](https://github.com/lambdaxing/HPLSP/tree/master/ch15/cgi.cpp)
