@@ -8,7 +8,7 @@
             "args": [
                 "-g",
                 "${file}",
-                "${fileDirname}/http_conn.cpp",
+                //"${fileDirname}/http_conn.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.out",
                 "-lpthread",    // for thread

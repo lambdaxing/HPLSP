@@ -87,7 +87,7 @@ int main(int argc, char* argv[]) {
                 socklen_t client_addrlength = sizeof(client_address);
                 int connfd = accept(listenfd, (struct sockaddr*)&client_address, &client_addrlength);
                 addfd(epollfd, connfd);
-            }else if(sockfd == udpfd) { // 处理 udp 这里有个 bug，并没有按 ET 模式处理，下一次触发读出的数据可能这一次触发未读完的数据。
+            }else if(sockfd == udpfd) { // 处理 udp 这里有个 bug，并没有按 ET 模式处理，下一次触发读出的数据可能是这一次触发未读完的数据。
                 char buf[UDP_BUFER_SIZE];
                 memset(buf, '\0', UDP_BUFER_SIZE);
                 struct sockaddr_in client_address;
