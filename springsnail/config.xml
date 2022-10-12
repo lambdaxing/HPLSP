@@ -1,0 +1,12 @@
+Listen 172.17.10.100:8080
+
+<logical_host>
+  <name>59.111.160.195</name>
+  <port>80</port>
+  <conns>5</conns>
+</logical_host>
+<logical_host>
+  <name>59.111.19.33</name>
+  <port>80</port>
+  <conns>5</conns>
+</logical_host>
